@@ -9,14 +9,18 @@ public class PlayerController : MonoBehaviour
     private bool isOnGround = true;
     private float gravityModifier = 0.8f;
 
+    // -- Stats
+    private float lives = 3; 
+
     // --- Move
     private float verticalInput;
     private float horizontalInput;
 
     // --- Skills
     private float speed = 10.0f;
-    private float turnSpeed = 100.0f;
-    private float jumpForce = 400;
+    private float BubbleSpeed = 300.0f;
+    private float turnSpeed = 300.0f;
+    private float jumpForce = 350;
 
     // --- Range
     private float xRange = 18;
@@ -46,8 +50,8 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * -horizontalInput);
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+        //transform.Translate(Vector3.right * Time.deltaTime * speed * -horizontalInput);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * -horizontalInput);
 
 
         /* player can not get off grounds
@@ -74,9 +78,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public Vector3 getPlayerRotation()
-    { return transform.position; }
-
     private void jump()
     {
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -85,7 +86,9 @@ public class PlayerController : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        GameObject Bubble = Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
+        BubbleRb.AddForce(transform.forward * BubbleSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
