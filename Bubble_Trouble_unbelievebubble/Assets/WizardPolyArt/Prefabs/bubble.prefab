@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4235737313756749985}
   m_Layer: 0
   m_Name: bubble
-  m_TagString: Untagged
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,11 +91,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965313692455383834}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.51473194
+  m_Center: {x: 0, y: -0.0147319585, z: 0}
 --- !u!54 &-4235737313756749985
 Rigidbody:
   m_ObjectHideFlags: 0

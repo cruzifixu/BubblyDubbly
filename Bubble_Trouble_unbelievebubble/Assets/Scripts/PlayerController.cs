@@ -9,17 +9,17 @@ public class PlayerController : MonoBehaviour
     private bool isOnGround = true;
     private float gravityModifier = 0.8f;
     public int playerId;
+    private PlayerStats playerStats;
 
     // -- Stats
     private float lives = 3;
 
     // --- Move
-    private float verticalInput;
     private float horizontalInput;
 
     // --- Skills
     private float speed = 10.0f;
-    private float BubbleSpeed = 900.0f;
+    private float BubbleSpeed = 10.0f;
     private float turnSpeed = 300.0f;
     private float jumpForce = 350;
 
@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         //Stats = GameObject.Find("PlayerStats").GetComponent<UpdatePlayerStats>();
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
+        playerStats = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -92,16 +93,22 @@ public class PlayerController : MonoBehaviour
     {
         GameObject Bubble = Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
-        BubbleRb.AddForce(transform.forward * BubbleSpeed);
+        BubbleRb.AddForce(transform.up * BubbleSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision detected");
         // if player is on Ground again
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
         }
-
+        if(collision.gameObject.CompareTag("bubble"))
+        {
+            Debug.Log("bubble hit player");
+            playerStats.reduceLives();
+            Destroy(collision.gameObject);
+        }
     }
 }

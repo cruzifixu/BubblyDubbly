@@ -32,13 +32,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI pausedText;
 
     // GAME OVER TEXT
-    //public TextMeshProUGUI gameOverText;
-    //public Button restartButton;
+    public TextMeshProUGUI gameOverText;
+    public Button restartButton;
 
     // CHOOSE PLAYER
     private Button IvyButton;
     private Button BubbleButton;
     private Button StormButton;
+
+    private int disabled=0;
 
     // Start is called before the first frame update
     void Start()
@@ -85,12 +87,13 @@ public class GameManager : MonoBehaviour
 
 
 
-
+        /*
         if (!IvyButton.enabled) disabled += 1;
         if (!BubbleButton.enabled) disabled += 1;
         if (!StormButton.enabled) disabled += 1;
 
         if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
+        */
     }
 
     public void UpdateScore(int scoreToAdd)
@@ -120,9 +123,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //gameOverText.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
         isGameActive = false;
-        //restartButton.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
     }
 
     public void RestartGame()
@@ -141,18 +144,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void UpdateLives(int livesLost)
-    {
-        if (lives > 0)
-        {
-            lives -= livesLost;
-        }
-        else
-        { GameOver(); }
-
-        //livesText.text = "Lives: " + lives;
-    }
-
     public int getLives()
     { return lives; }
 
@@ -160,17 +151,23 @@ public class GameManager : MonoBehaviour
     {
         IvyButton.interactable = false; // disable Button
         Instantiate(players[0], new Vector3(0, 1, 0), players[0].transform.rotation);
+        disabled++;
+        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
     private void SetBubble()
     {
         BubbleButton.interactable = false;
         Instantiate(players[1], new Vector3(0, 1, 0), players[1].transform.rotation);
+        disabled++;
+        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
 
     private void SetStorm()
     {
         StormButton.interactable = false;
         Instantiate(players[2], new Vector3(0, 1, 0), players[2].transform.rotation);
+        disabled++;
+        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
 }
 

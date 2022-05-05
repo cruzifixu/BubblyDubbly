@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    public float speed = 30.0f;
+    public float speed = 70.0f;
+
 
     public GameObject player;
 
@@ -17,6 +18,9 @@ public class MoveForward : MonoBehaviour
     void Update()
     {
         Vector3 bubblePos = new Vector3(0, player.transform.rotation.y+1, 0);
+        //TODO: REDUCE FORCE IN PLAYERCONTROLLER AND ADD MORE SPEED HERE
+
         transform.Translate(bubblePos * Time.deltaTime * speed);
     }
+
 }
