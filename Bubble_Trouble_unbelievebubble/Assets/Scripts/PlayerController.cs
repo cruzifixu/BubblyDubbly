@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     // --- Skills
     private float speed = 10.0f;
-    private float BubbleSpeed = 300.0f;
+    private float BubbleSpeed = 900.0f;
     private float turnSpeed = 300.0f;
     private float jumpForce = 350;
 
