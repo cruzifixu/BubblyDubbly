@@ -47,11 +47,20 @@ public class PlayerController : MonoBehaviour
         //{
 
         horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        //transform.Translate(Vector3.right * Time.deltaTime * speed * -horizontalInput);
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * -horizontalInput);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
+        movementDirection.Normalize();
+
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        transform.Translate(movementDirection * Time.deltaTime * speed, Space.World);
+        //transform.Rotate(Vector3.forward, Time.deltaTime * turnSpeed * -horizontalInput);
+
+        //TODO: MAKE MOVEMENT BETTER (https://www.youtube.com/watch?v=BJzYGsMcy8Q&ab_channel=KetraGames)
+        if (movementDirection != Vector3.zero)
+        {
+            transform.forward = movementDirection;
+        }
+        
 
 
         /* player can not get off grounds
@@ -72,7 +81,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
             { jump(); } // returns clone of original
             // shoot
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.W)) //triangle
             { shoot(); } // returns clone of original
         //}
 
