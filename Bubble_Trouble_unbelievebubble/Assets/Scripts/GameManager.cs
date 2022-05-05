@@ -12,12 +12,16 @@ public class GameManager : MonoBehaviour
     public List<GameObject> potions;
     private float spawnRate = 1.0f;
     public bool isGameActive;
-    private float playerCount; 
+    private float playerCount;
 
     // ----- UI -----
 
     // TITLE
     public GameObject titleScreen;
+
+    // CHOICE
+    public GameObject PlayerChoiceScreen;
+    public List<GameObject> Choices;
 
     // IN GAME TEXT
     private int lives = 3;
@@ -31,9 +35,15 @@ public class GameManager : MonoBehaviour
     //public TextMeshProUGUI gameOverText;
     //public Button restartButton;
 
+    // CHOOSE PLAYER
+    private Button IvyButton;
+    private Button BubbleButton;
+    private Button StormButton;
+
     // Start is called before the first frame update
     void Start()
     {
+        StartGame();
     }
 
     // Update is called once per frame
@@ -50,11 +60,37 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = true;
         //StartCoroutine(SpawnTarget());
-        //UpdateScore(0);
-        //UpdateLives(0);
         spawnRate /= playerCount;
 
         titleScreen.gameObject.SetActive(false);
+        ChoosePlayer();
+    }
+
+    public void ChoosePlayer()
+    {
+        PlayerChoiceScreen.gameObject.SetActive(true);
+
+        int disabled = 0;
+        // -- Get Components
+        IvyButton = GameObject.Find("Ivy").GetComponent<Button>();
+        BubbleButton = GameObject.Find("Bubble").GetComponent<Button>();
+        StormButton = GameObject.Find("Storm").GetComponent<Button>();
+
+        //while (disabled < 2)
+        //{
+            IvyButton.onClick.AddListener(SetIvy);
+            BubbleButton.onClick.AddListener(SetBubble);
+            StormButton.onClick.AddListener(SetStorm);
+        //}
+
+
+
+
+        if (!IvyButton.enabled) disabled += 1;
+        if (!BubbleButton.enabled) disabled += 1;
+        if (!StormButton.enabled) disabled += 1;
+
+        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
 
     public void UpdateScore(int scoreToAdd)
@@ -119,5 +155,22 @@ public class GameManager : MonoBehaviour
 
     public int getLives()
     { return lives; }
+
+    private void SetIvy()
+    {
+        IvyButton.interactable = false; // disable Button
+        Instantiate(players[0], new Vector3(0, 1, 0), players[0].transform.rotation);
+    }
+    private void SetBubble()
+    {
+        BubbleButton.interactable = false;
+        Instantiate(players[1], new Vector3(0, 1, 0), players[1].transform.rotation);
+    }
+
+    private void SetStorm()
+    {
+        StormButton.interactable = false;
+        Instantiate(players[2], new Vector3(0, 1, 0), players[2].transform.rotation);
+    }
 }
 

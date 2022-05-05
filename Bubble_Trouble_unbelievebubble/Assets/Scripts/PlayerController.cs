@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private bool isOnGround = true;
     private float gravityModifier = 0.8f;
+    public int playerId;
 
     // -- Stats
-    private float lives = 3; 
+    private float lives = 3;
 
     // --- Move
     private float verticalInput;
@@ -45,8 +46,11 @@ public class PlayerController : MonoBehaviour
     {
         //if (Stats.getHealth() > 0)
         //{
+        int playerMoveId = playerId + 1;
+        horizontalInput = Input.GetAxis("Horizontal" + playerMoveId);
+        //verticalInput = Input.GetAxis("Vertical" + playerMoveId);
 
-        horizontalInput = Input.GetAxis("Horizontal");
+        //horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
         movementDirection.Normalize();
@@ -60,29 +64,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.forward = movementDirection;
         }
-        
 
 
-        /* player can not get off grounds
-        if (transform.position.x < -xRange)
-        { transform.position = new Vector3(-xRange, transform.position.y, transform.position.z); }
-        if (transform.position.x > xRange)
-        { transform.position = new Vector3(xRange, transform.position.y, transform.position.z); }
+        // player can not get off grounds
+        if (transform.position.z < MinusZRange)
+        { transform.position = new Vector3(transform.position.x, transform.position.y, MinusZRange); }
+        if (transform.position.z > PlusZRange)
+        { transform.position = new Vector3(transform.position.x, transform.position.y, PlusZRange); }
 
-        */
-
-            // player can not get off grounds
-            if (transform.position.z < MinusZRange)
-            { transform.position = new Vector3(transform.position.x, transform.position.y, MinusZRange); }
-            if (transform.position.z > PlusZRange)
-            { transform.position = new Vector3(transform.position.x, transform.position.y, PlusZRange); }
-
-            // jump
-            if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
-            { jump(); } // returns clone of original
-            // shoot
-            if (Input.GetKeyDown(KeyCode.W)) //triangle
-            { shoot(); } // returns clone of original
+        // jump
+        if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
+        { jump(); } // returns clone of original
+                    // shoot
+        if (Input.GetAxis("Fire" + playerMoveId) ==1) //triangle
+        { shoot(); } // returns clone of original
         //}
 
     }
@@ -107,6 +102,6 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
         }
-        
+
     }
 }
