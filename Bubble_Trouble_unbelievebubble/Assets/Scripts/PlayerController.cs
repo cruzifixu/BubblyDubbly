@@ -91,25 +91,29 @@ public class PlayerController : MonoBehaviour
 
     private void shoot()
     {
-        Vector3 offeset = new Vector3(0, 1.5f, 0);
+        Vector3 offeset = new Vector3(0, 1, 0);
         GameObject Bubble = Instantiate(projectilePrefab, transform.position + offeset, projectilePrefab.transform.rotation);
+        Bubble.gameObject.tag = playerId.ToString();
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
         BubbleRb.AddForce(transform.right * BubbleSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision detected");
         // if player is on Ground again
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
         }
-        if(collision.gameObject.CompareTag("bubble"))
+        if(collision.gameObject.CompareTag("0") || collision.gameObject.CompareTag("1") || collision.gameObject.CompareTag("2"))
         {
-            Debug.Log("bubble hit player");
-            playerStats.reduceLives();
-            //Destroy(collision.gameObject);
+            if(collision.gameObject.tag != this.playerId.ToString())
+            {
+                Debug.Log("bubble "+ collision.gameObject.tag +" hit player " + this.name);
+                playerStats.reduceLives();
+                //Destroy(collision.gameObject);
+            }
+
         }
     }
 }

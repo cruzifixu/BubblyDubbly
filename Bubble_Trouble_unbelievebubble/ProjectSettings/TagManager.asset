@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - bubble
+  - 0
+  - 1
+  - 2
   layers:
   - Default
   - TransparentFX

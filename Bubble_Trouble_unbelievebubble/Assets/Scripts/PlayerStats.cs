@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private float lives = 10f;
+    private float lives = 100f;
     private GameManager GameManagerScript;
 
     // Start is called before the first frame update
