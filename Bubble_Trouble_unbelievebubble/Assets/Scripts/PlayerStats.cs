@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private float lives = 100f;
+    private float lives = 15f;
     private GameManager GameManagerScript;
 
     // Start is called before the first frame update
@@ -19,14 +19,18 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    public void reduceLives()
+    public void reduceLives(string playerId)
     {
         if (GameManagerScript == null) Debug.Log("manager null");
-        if(this.lives > 0)
+        if (this.lives > 0)
         {
             this.lives--;
             Debug.Log(lives);
         }
-        else GameManagerScript.GameOver();
+        else
+        {
+            GameManagerScript.GameOver();
+            Debug.Log("player " + playerId + " won!");
+        }
     }
 }

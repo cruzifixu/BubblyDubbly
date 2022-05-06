@@ -78,7 +78,9 @@ public class PlayerController : MonoBehaviour
         { jump(); } // returns clone of original
                     // shoot
         if (Input.GetAxis("Fire" + playerMoveId) ==1) //triangle
-        { shoot(); } // returns clone of original
+        { 
+            shoot(); 
+        } // returns clone of original
         //}
 
     }
@@ -110,7 +112,7 @@ public class PlayerController : MonoBehaviour
             if(collision.gameObject.tag != this.playerId.ToString())
             {
                 Debug.Log("bubble "+ collision.gameObject.tag +" hit player " + this.name);
-                playerStats.reduceLives();
+                playerStats.reduceLives(collision.gameObject.tag);
                 //Destroy(collision.gameObject);
             }
 
