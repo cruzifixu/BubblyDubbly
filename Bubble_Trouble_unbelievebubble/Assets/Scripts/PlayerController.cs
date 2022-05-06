@@ -91,9 +91,10 @@ public class PlayerController : MonoBehaviour
 
     private void shoot()
     {
-        GameObject Bubble = Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        Vector3 offeset = new Vector3(0, 1.5f, 0);
+        GameObject Bubble = Instantiate(projectilePrefab, transform.position + offeset, projectilePrefab.transform.rotation);
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
-        BubbleRb.AddForce(transform.up * BubbleSpeed);
+        BubbleRb.AddForce(transform.right * BubbleSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -108,7 +109,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("bubble hit player");
             playerStats.reduceLives();
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
     }
 }
