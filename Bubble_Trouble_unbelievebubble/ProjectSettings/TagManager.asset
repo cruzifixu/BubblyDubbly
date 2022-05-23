@@ -9,6 +9,9 @@ TagManager:
   - 0
   - 1
   - 2
+  - endurance
+  - health
+  - mana
   layers:
   - Default
   - TransparentFX
