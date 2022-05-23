@@ -145,23 +145,20 @@ public class GameManager : MonoBehaviour
     private void SetIvy()
     {
         IvyButton.interactable = false; // disable Button
-        GameObject Ivy = Instantiate(players[0], new Vector3(1, 1, 0), players[0].transform.rotation);
-        Ivy.gameObject.tag = "Ivy";
+        Instantiate(players[0], new Vector3(1, 1, 0), players[0].transform.rotation);
         disabled++;
     }
     private void SetBubble()
     {
         BubbleButton.interactable = false; // disable Button
-        GameObject Bubble = Instantiate(players[1], new Vector3(2, 1, 0), players[1].transform.rotation);
-        Bubble.gameObject.tag = "Bubble";
+        Instantiate(players[1], new Vector3(2, 1, 0), players[1].transform.rotation);
         disabled++;
     }
 
     private void SetStorm()
     {
         StormButton.interactable = false; // disable Button
-        GameObject Storm = Instantiate(players[2], new Vector3(3, 1, 0), players[2].transform.rotation);
-        Storm.gameObject.tag = "Storm";
+        Instantiate(players[2], new Vector3(3, 1, 0), players[2].transform.rotation);
         disabled++;
     }
 

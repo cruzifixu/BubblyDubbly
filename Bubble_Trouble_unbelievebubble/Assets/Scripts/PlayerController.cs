@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         {
             if(collision.gameObject.tag != this.playerId.ToString())
             {
-                Debug.Log(collision.gameObject.tag +" hit " + this.name);
+                Debug.Log(collision.gameObject.name +" hit " + this.name);
                 playerStats.reduceLivePercentage(collision.gameObject.tag, this.name);
                 //Destroy(collision.gameObject);
             }

@@ -16,5 +16,12 @@ public class InGameTextManager : MonoBehaviour
         
     }
 
-    public void 
+    public void hitPlayer(string player1, string player2)
+    { Debug.Log(player1 + " hit " + player2); }
+
+    public void playerLives(string player, int lives)
+    { Debug.Log(player + " only has " + lives + "left."); }
+
+    public string Winner(string player)
+    { return player + "won!"; }
 }

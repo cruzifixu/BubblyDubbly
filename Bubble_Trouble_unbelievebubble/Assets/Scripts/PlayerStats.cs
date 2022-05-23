@@ -14,6 +14,9 @@ public class PlayerStats : MonoBehaviour
     // Scripts
     private GameManager GameManagerScript;
 
+    // TEXTS
+    public GameObject PlayerStatsScreen;
+
     // Start is called before the first frame update
     void Start()
     {
