@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InGameTextManager : MonoBehaviour
 {
+    string text;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     private float playerCount;
 
+    private List<PlayerStats> PlayerStatsList;
+    private List<int> PlayerList;
+
     // ----- UI -----
 
     // TITLE
@@ -24,7 +27,10 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Choices;
 
     // IN GAME TEXT
-
+    public TextMeshProUGUI BubbleStats;
+    public TextMeshProUGUI IvyStats;
+    public TextMeshProUGUI StormStats;
+    //public TextMeshProUGUI BubbleStats;
 
     //public TextMeshProUGUI livesText;
     private int score;
@@ -46,6 +52,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerStatsList = new List<PlayerStats>();
+        PlayerList = new List<int>();
         StartGame();
     }
 
@@ -124,6 +132,32 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
         restartButton.gameObject.SetActive(true);
+
+        for(int i = 0; i < PlayerList.Count; i++)
+        {
+            ShowStats(PlayerStatsList[i].SendStats(PlayerList[i]), PlayerList[i]);
+            Debug.Log("PLAYER IN LIST " + PlayerList[i]);
+        }
+        
+    }
+
+    public void ShowStats(string Stats, int playerId)
+    {
+        switch(playerId)
+        {
+            case 0:
+                IvyStats.text = Stats;
+                IvyStats.gameObject.SetActive(true);
+                break;
+            case 1:
+                StormStats.text = Stats;
+                StormStats.gameObject.SetActive(true);
+                break;
+            case 2:
+                BubbleStats.text = Stats;
+                BubbleStats.gameObject.SetActive(true);
+                break;
+        }
     }
 
     public void RestartGame()
@@ -142,17 +176,25 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void addToPlayerList(PlayerStats Stats)
+    { this.PlayerStatsList.Add(Stats); }
+
+    public List<PlayerStats> getPlayerStatsList()
+    { return PlayerStatsList; }
+
     private void SetIvy()
     {
         IvyButton.interactable = false; // disable Button
         Instantiate(players[0], new Vector3(1, 1, 0), players[0].transform.rotation);
         disabled++;
+        PlayerList.Add(0);
     }
     private void SetBubble()
     {
         BubbleButton.interactable = false; // disable Button
         Instantiate(players[1], new Vector3(2, 1, 0), players[1].transform.rotation);
         disabled++;
+        PlayerList.Add(2);
     }
 
     private void SetStorm()
@@ -160,6 +202,7 @@ public class GameManager : MonoBehaviour
         StormButton.interactable = false; // disable Button
         Instantiate(players[2], new Vector3(3, 1, 0), players[2].transform.rotation);
         disabled++;
+        PlayerList.Add(1);
     }
 
     private void disableStartscreen()

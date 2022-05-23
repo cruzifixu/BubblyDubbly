@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log(collision.gameObject.name +" hit " + this.name);
                 playerStats.reduceLivePercentage(collision.gameObject.tag, this.name);
+                playerStats.playerHitOther();
                 //Destroy(collision.gameObject);
             }
 

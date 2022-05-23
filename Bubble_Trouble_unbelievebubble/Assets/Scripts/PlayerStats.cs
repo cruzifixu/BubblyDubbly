@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
     // Stats
     private float LivePercentage = 20f;
     private float Lives = 3;
+    private float PlayerHit = 0;
+    private float gotHit = 0;
 
     // Bounds
     private float bound = 30f;
@@ -21,14 +23,17 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         GameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        GameManagerScript.addToPlayerList(this);
     }
-
     // Update is called once per frame
     void Update()
     {
         if (transform.position.y < -bound)
         { reduceLives();  }
     }
+
+    public void playerHitOther()
+    { this.PlayerHit++; }
 
     public void reduceLives()
     { --this.Lives; }
@@ -38,19 +43,40 @@ public class PlayerStats : MonoBehaviour
         if (this.LivePercentage > 0)
         {
             this.LivePercentage--;
-            Debug.Log(hurtPlayerId + "'s live = " + LivePercentage);
+            gotHit++; // player got hit
+            Debug.Log(playerId + " hit " + hurtPlayerId);
         }
         else
         {
             if(Lives < 1)
             {
                 GameManagerScript.GameOver();
-                Debug.Log(playerId + " won!");
-
+                Debug.Log("player " + playerId + " won");
                 return;
             }
             reduceLives();
-            Debug.Log(hurtPlayerId + " only has " + Lives + "left.");
+            Debug.Log(playerId + " only has " + Lives + "left.");
         }
+    }
+
+    public string SendStats(int playerId)
+    {
+        string player = "none";
+
+        switch(playerId)
+        {
+            case 0:
+                player = "Ivy";
+                break;
+            case 1:
+                player = "Storm";
+                break;
+            case 2:
+                player = "Bubble";
+                break;
+        }
+        string StatsText = player + "\nLives left: " + (3 - Lives) + "\nTook damage: " + gotHit + "\nDamage made: " + PlayerHit;
+
+        return StatsText;
     }
 }
