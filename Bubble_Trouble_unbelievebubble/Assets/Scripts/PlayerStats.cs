@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private float lives = 15f;
+    // Stats
+    private float LivePercentage = 20f;
+    private float Lives = 3;
+
+    // Bounds
+    private float bound = 30f;
+
+    // Scripts
     private GameManager GameManagerScript;
 
     // Start is called before the first frame update
@@ -16,21 +23,31 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (transform.position.y < -bound)
+        { reduceLives();  }
     }
 
-    public void reduceLives(string playerId)
+    public void reduceLives()
+    { --this.Lives; }
+
+    public void reduceLivePercentage(string playerId, string hurtPlayerId)
     {
-        if (GameManagerScript == null) Debug.Log("manager null");
-        if (this.lives > 0)
+        if (this.LivePercentage > 0)
         {
-            this.lives--;
-            Debug.Log(lives);
+            this.LivePercentage--;
+            Debug.Log(hurtPlayerId + "'s live = " + LivePercentage);
         }
         else
         {
-            GameManagerScript.GameOver();
-            Debug.Log("player " + playerId + " won!");
+            if(Lives < 1)
+            {
+                GameManagerScript.GameOver();
+                Debug.Log(playerId + " won!");
+
+                return;
+            }
+            reduceLives();
+            Debug.Log(hurtPlayerId + " only has " + Lives + "left.");
         }
     }
 }

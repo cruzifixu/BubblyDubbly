@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    private float topZ = 10f;
-    private float topY = 15f;
-    private float topX = 28f;
+    private float bound = 30f;
 
 
     // Start is called before the first frame update
@@ -18,15 +16,13 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > topZ || transform.position.y > topY || transform.position.x > topX)
+        if (transform.position.z > bound || transform.position.y > bound || transform.position.x > bound)
         {
-            if (gameObject.CompareTag("bubble")) { Destroy(gameObject); }
-            // if(gameObject.CompareTag("Player")) { }
+            if (gameObject.CompareTag("0") || gameObject.CompareTag("1") || gameObject.CompareTag("2")) { Destroy(gameObject); }
         }
-        else if (transform.position.z < -topZ || transform.position.y < -topY || transform.position.x < -topX)
+        else if (transform.position.z < -bound || transform.position.y < -bound || transform.position.x < -bound)
         {
-            if (gameObject.CompareTag("bubble")) { Destroy(gameObject); }
-            // if (gameObject.CompareTag("Player")) { }
+            if (gameObject.CompareTag("0") || gameObject.CompareTag("1") || gameObject.CompareTag("2")) { Destroy(gameObject); }
         }
     }
 }
