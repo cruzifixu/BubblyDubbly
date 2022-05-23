@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Choices;
 
     // IN GAME TEXT
-    private int lives = 3;
+
+
     //public TextMeshProUGUI livesText;
     private int score;
     //public TextMeshProUGUI scoreText;
@@ -56,6 +57,8 @@ public class GameManager : MonoBehaviour
             gamePaused = !gamePaused;
             Pause();
         }
+
+        if(disabled > 1) disableStartscreen();
     }
 
     public void StartGame()
@@ -64,7 +67,6 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(SpawnTarget());
         spawnRate /= playerCount;
 
-        titleScreen.gameObject.SetActive(false);
         ChoosePlayer();
     }
 
@@ -73,19 +75,15 @@ public class GameManager : MonoBehaviour
         PlayerChoiceScreen.gameObject.SetActive(true);
 
         int disabled = 0;
+
         // -- Get Components
         IvyButton = GameObject.Find("Ivy").GetComponent<Button>();
         BubbleButton = GameObject.Find("Bubble").GetComponent<Button>();
         StormButton = GameObject.Find("Storm").GetComponent<Button>();
 
-        //while (disabled < 2)
-        //{
-            IvyButton.onClick.AddListener(SetIvy);
-            BubbleButton.onClick.AddListener(SetBubble);
-            StormButton.onClick.AddListener(SetStorm);
-        //}
-
-
+        IvyButton.onClick.AddListener(SetIvy);
+        BubbleButton.onClick.AddListener(SetBubble);
+        StormButton.onClick.AddListener(SetStorm);
 
         /*
         if (!IvyButton.enabled) disabled += 1;
@@ -144,30 +142,33 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public int getLives()
-    { return lives; }
-
     private void SetIvy()
     {
         IvyButton.interactable = false; // disable Button
-        Instantiate(players[0], new Vector3(0, 1, 0), players[0].transform.rotation);
+        GameObject Ivy = Instantiate(players[0], new Vector3(1, 1, 0), players[0].transform.rotation);
+        Ivy.gameObject.tag = "Ivy";
         disabled++;
-        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
     private void SetBubble()
     {
-        BubbleButton.interactable = false;
-        Instantiate(players[1], new Vector3(0, 1, 0), players[1].transform.rotation);
+        BubbleButton.interactable = false; // disable Button
+        GameObject Bubble = Instantiate(players[1], new Vector3(2, 1, 0), players[1].transform.rotation);
+        Bubble.gameObject.tag = "Bubble";
         disabled++;
-        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
     }
 
     private void SetStorm()
     {
-        StormButton.interactable = false;
-        Instantiate(players[2], new Vector3(0, 1, 0), players[2].transform.rotation);
+        StormButton.interactable = false; // disable Button
+        GameObject Storm = Instantiate(players[2], new Vector3(3, 1, 0), players[2].transform.rotation);
+        Storm.gameObject.tag = "Storm";
         disabled++;
+    }
+
+    private void disableStartscreen()
+    {
         if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
+        titleScreen.gameObject.SetActive(false);
     }
 }
 

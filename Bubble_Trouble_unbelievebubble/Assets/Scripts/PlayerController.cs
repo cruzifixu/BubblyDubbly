@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 350;
 
     // --- Range
-    private float xRange = 18;
     private float PlusZRange = -3.4f;
     private float MinusZRange = -6;
 
@@ -45,8 +44,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Stats.getHealth() > 0)
-        //{
         int playerMoveId = playerId + 1;
         horizontalInput = Input.GetAxis("Horizontal" + playerMoveId);
         //verticalInput = Input.GetAxis("Vertical" + playerMoveId);
@@ -93,8 +90,8 @@ public class PlayerController : MonoBehaviour
 
     private void shoot()
     {
-        Vector3 offeset = new Vector3(0, 1, 0);
-        GameObject Bubble = Instantiate(projectilePrefab, transform.position + offeset, projectilePrefab.transform.rotation);
+        Vector3 offset = new Vector3(0.5f, 1, 0);
+        GameObject Bubble = Instantiate(projectilePrefab, transform.position + offset, projectilePrefab.transform.rotation);
         Bubble.gameObject.tag = playerId.ToString();
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
         BubbleRb.AddForce(transform.right * BubbleSpeed);
@@ -111,8 +108,8 @@ public class PlayerController : MonoBehaviour
         {
             if(collision.gameObject.tag != this.playerId.ToString())
             {
-                Debug.Log("bubble "+ collision.gameObject.tag +" hit player " + this.name);
-                playerStats.reduceLives(collision.gameObject.tag);
+                Debug.Log(collision.gameObject.tag +" hit " + this.name);
+                playerStats.reduceLivePercentage(collision.gameObject.tag, this.name);
                 //Destroy(collision.gameObject);
             }
 
