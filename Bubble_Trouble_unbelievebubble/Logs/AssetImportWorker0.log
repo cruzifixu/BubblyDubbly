@@ -1,7 +1,11 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.30f1 (1fb1bf06830e) revision 2077119'; Using compiler version '192528614'; Build Type 'Release'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'de' Physical Memory: 16192 MB
+=======
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'de' Physical Memory: 16169 MB
+>>>>>>> Stashed changes
 =======
 OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'de' Physical Memory: 16169 MB
 >>>>>>> Stashed changes
@@ -15,6 +19,7 @@ C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 C:/Users/inaap/Documents/GitHub/BubblyDubbly/Bubble_Trouble_unbelievebubble
 -logFile
@@ -37,6 +42,8 @@ Direct3D:
     VRAM:     8096 MB
     Driver:   30.0.101.1122
 =======
+=======
+>>>>>>> Stashed changes
 C:/Users/Franz/OneDrive/Dokumente/GitHub/BubblyDubbly/Bubble_Trouble_unbelievebubble
 -logFile
 Logs/AssetImportWorker0.log
@@ -58,11 +65,15 @@ Direct3D:
     Vendor:   
     VRAM:     8084 MB
     Driver:   26.20.100.7985
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
 Begin MonoManager ReloadAssembly
@@ -80,6 +91,8 @@ Domain Reload Profiling:
 	ReloadAssembly (928ms)
 		BeginReloadAssembly (110ms)
 =======
+=======
+>>>>>>> Stashed changes
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -93,12 +106,16 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (695ms)
 		BeginReloadAssembly (88ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		EndReloadAssembly (691ms)
 			LoadAssemblies (108ms)
@@ -114,6 +131,8 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (26ms)
 				ProcessInitializeOnLoadAttributes (129ms)
 =======
+=======
+>>>>>>> Stashed changes
 		EndReloadAssembly (523ms)
 			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -127,6 +146,9 @@ Domain Reload Profiling:
 				RefreshPlugins (37ms)
 				BeforeProcessingInitializeOnLoad (18ms)
 				ProcessInitializeOnLoadAttributes (93ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (0ms)
@@ -135,6 +157,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.002554 seconds.
 Begin MonoManager ReloadAssembly
@@ -183,6 +206,8 @@ System memory in use after: 74.2 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1996.
 Total: 4.773200 ms (FindLiveObjects: 0.235200 ms CreateObjectMapping: 0.130900 ms MarkObjects: 4.306900 ms  DeleteObjects: 0.099000 ms)
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.004806 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -228,6 +253,9 @@ System memory in use after: 74.2 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1995.
 Total: 3.122300 ms (FindLiveObjects: 0.145100 ms CreateObjectMapping: 0.059300 ms MarkObjects: 2.824900 ms  DeleteObjects: 0.092000 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -243,6 +271,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   path: Assets/Scripts/SpawnManager.cs
   artifactKey: Guid(447f54f48fe0315458e7f0d6b0c9254f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -294,6 +323,8 @@ System memory in use after: 72.7 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1998.
 Total: 7.228800 ms (FindLiveObjects: 0.598300 ms CreateObjectMapping: 0.197900 ms MarkObjects: 6.359700 ms  DeleteObjects: 0.069300 ms)
 =======
+=======
+>>>>>>> Stashed changes
   path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
   artifactKey: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42f675f126e9520b586a1cbd8b29397') in 0.186673 seconds 
@@ -364,6 +395,9 @@ System memory in use after: 76.0 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2039.
 Total: 5.679400 ms (FindLiveObjects: 0.557900 ms CreateObjectMapping: 0.259400 ms MarkObjects: 4.791700 ms  DeleteObjects: 0.068800 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -378,6 +412,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 1341.002486 seconds.
@@ -455,6 +490,8 @@ System memory in use after: 75.9 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2008.
 Total: 11.588000 ms (FindLiveObjects: 0.574500 ms CreateObjectMapping: 0.331200 ms MarkObjects: 10.599400 ms  DeleteObjects: 0.078700 ms)
 =======
+=======
+>>>>>>> Stashed changes
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.010633 seconds.
@@ -499,6 +536,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2041.
 Total: 4.627600 ms (FindLiveObjects: 0.187700 ms CreateObjectMapping: 0.082200 ms MarkObjects: 4.297800 ms  DeleteObjects: 0.058600 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -513,6 +553,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 223.024611 seconds.
@@ -566,6 +607,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2044.
 Total: 6.164100 ms (FindLiveObjects: 0.302000 ms CreateObjectMapping: 0.116300 ms MarkObjects: 5.697500 ms  DeleteObjects: 0.046300 ms)
 =======
+=======
+>>>>>>> Stashed changes
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.007261 seconds.
@@ -610,6 +653,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2043.
 Total: 4.571500 ms (FindLiveObjects: 0.225300 ms CreateObjectMapping: 0.076800 ms MarkObjects: 4.234800 ms  DeleteObjects: 0.033500 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -626,6 +672,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.003975 seconds.
 Begin MonoManager ReloadAssembly
@@ -671,6 +718,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2046.
 Total: 7.221800 ms (FindLiveObjects: 0.435900 ms CreateObjectMapping: 0.375100 ms MarkObjects: 6.354500 ms  DeleteObjects: 0.053700 ms)
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.008985 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -713,6 +762,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2045.
 Total: 5.597100 ms (FindLiveObjects: 0.206600 ms CreateObjectMapping: 0.094600 ms MarkObjects: 5.261700 ms  DeleteObjects: 0.032700 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -728,6 +780,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003842 seconds.
@@ -742,6 +795,8 @@ Domain Reload Profiling:
 	ReloadAssembly (2616ms)
 		BeginReloadAssembly (268ms)
 =======
+=======
+>>>>>>> Stashed changes
 Received Import Request.
   Time since last request: 478.202645 seconds.
   path: Assets/Scripts/GameManager.cs
@@ -760,11 +815,15 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (2115ms)
 		BeginReloadAssembly (257ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 			CreateAndSetChildDomain (73ms)
 		EndReloadAssembly (2186ms)
@@ -783,6 +842,8 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (18ms)
 				AfterProcessingInitializeOnLoad (10ms)
 =======
+=======
+>>>>>>> Stashed changes
 			CreateAndSetChildDomain (50ms)
 		EndReloadAssembly (1711ms)
 			LoadAssemblies (242ms)
@@ -799,11 +860,15 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (510ms)
 				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (16ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -814,6 +879,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2048.
 Total: 4.535600 ms (FindLiveObjects: 0.219300 ms CreateObjectMapping: 0.096700 ms MarkObjects: 4.188000 ms  DeleteObjects: 0.030100 ms)
 =======
+=======
+>>>>>>> Stashed changes
 Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1536 Unused Serialized files (Serialized files now loaded: 0)
@@ -822,6 +889,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2047.
 Total: 5.257300 ms (FindLiveObjects: 0.308800 ms CreateObjectMapping: 0.252300 ms MarkObjects: 4.657500 ms  DeleteObjects: 0.036500 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -837,6 +907,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Time since last request: 206.159989 seconds.
   path: Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
@@ -901,6 +972,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2051.
 Total: 3.868600 ms (FindLiveObjects: 0.194800 ms CreateObjectMapping: 0.054200 ms MarkObjects: 3.595400 ms  DeleteObjects: 0.022900 ms)
 =======
+=======
+>>>>>>> Stashed changes
   Time since last request: 42.731468 seconds.
   path: Assets/Scripts/GameManager.cs
   artifactKey: Guid(7fd433438ae92f643970f9a1d4c55c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1013,6 +1086,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2051.
 Total: 4.293900 ms (FindLiveObjects: 0.265300 ms CreateObjectMapping: 0.107500 ms MarkObjects: 3.857300 ms  DeleteObjects: 0.062100 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1028,6 +1104,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Time since last request: 82.961405 seconds.
   path: Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
@@ -1092,6 +1169,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2054.
 Total: 6.881500 ms (FindLiveObjects: 0.428300 ms CreateObjectMapping: 0.238000 ms MarkObjects: 6.165800 ms  DeleteObjects: 0.046400 ms)
 =======
+=======
+>>>>>>> Stashed changes
   Time since last request: 49.200576 seconds.
   path: Assets/Scripts/GameManager.cs
   artifactKey: Guid(7fd433438ae92f643970f9a1d4c55c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1204,6 +1283,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2055.
 Total: 4.210400 ms (FindLiveObjects: 0.202300 ms CreateObjectMapping: 0.094000 ms MarkObjects: 3.882000 ms  DeleteObjects: 0.030800 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1219,6 +1301,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Time since last request: 108.195279 seconds.
   path: Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
@@ -1307,6 +1390,8 @@ System memory in use after: 76.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2057.
 Total: 4.828100 ms (FindLiveObjects: 0.268900 ms CreateObjectMapping: 0.090700 ms MarkObjects: 4.418600 ms  DeleteObjects: 0.047900 ms)
 =======
+=======
+>>>>>>> Stashed changes
   Time since last request: 9.220037 seconds.
   path: Assets/Scripts/GameManager.cs
   artifactKey: Guid(7fd433438ae92f643970f9a1d4c55c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1356,6 +1441,9 @@ System memory in use after: 76.1 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2057.
 Total: 5.257900 ms (FindLiveObjects: 0.349700 ms CreateObjectMapping: 0.218200 ms MarkObjects: 4.650200 ms  DeleteObjects: 0.038000 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1371,6 +1459,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Time since last request: 1000.567082 seconds.
   path: ProjectSettings/TagManager.asset
@@ -1395,6 +1484,8 @@ Received Import Request.
   artifactKey: Guid(2cf6690298568294cb6b655c0a3aeb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/RPG Pack/Prefabs/Bottle_Mana.prefab using Guid(2cf6690298568294cb6b655c0a3aeb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2369418ab3b0cc40f1752331c36aadc8') in 0.080661 seconds 
 =======
+=======
+>>>>>>> Stashed changes
   Time since last request: 7.688025 seconds.
   path: Assets/Scripts/GameManager.cs
   artifactKey: Guid(7fd433438ae92f643970f9a1d4c55c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -4551,5 +4642,8 @@ Received Import Request.
   path: Assets/Scripts/InGameTextManager.cs
   artifactKey: Guid(f6dc5f2eca5f27448b263af8d3f763ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/InGameTextManager.cs using Guid(f6dc5f2eca5f27448b263af8d3f763ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d07a9a7329ea1fc5f48b1dd70ab72d') in 0.007013 seconds 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
