@@ -23,7 +23,11 @@ MonoBehaviour:
   m_RootView: {fileID: 2}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_MinSize: {x: 875, y: 542}
+=======
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> Stashed changes
 =======
   m_MinSize: {x: 875, y: 300}
 >>>>>>> Stashed changes
@@ -59,6 +63,9 @@ MonoBehaviour:
     width: 1536
     height: 781
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -148,6 +155,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 130
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -185,6 +195,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 131
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -291,6 +304,9 @@ MonoBehaviour:
     width: 1203
     height: 245
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -450,7 +466,11 @@ MonoBehaviour:
       m_LastClickedID: 0
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_ExpandedIDs: 56bcffff3a6300003e63000040630000
+=======
+      m_ExpandedIDs: ee2dffff70fbffff323e0000
+>>>>>>> Stashed changes
 =======
       m_ExpandedIDs: ee2dffff70fbffff323e0000
 >>>>>>> Stashed changes
@@ -502,6 +522,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     x: 1231
     y: -1333
     width: 1072
@@ -509,11 +530,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     x: 294.4
     y: 73.6
     width: 907
     height: 465
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -531,9 +557,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: 0.51, y: 0.44254112, z: 0}
     speed: 2
     m_Value: {x: -0.37, y: 0.44573528, z: 0}
+=======
+    m_Target: {x: 2, y: 2.5, z: -3}
+    speed: 2
+    m_Value: {x: 2, y: 2.5, z: -3}
+>>>>>>> Stashed changes
 =======
     m_Target: {x: 2, y: 2.5, z: -3}
     speed: 2
@@ -592,6 +624,7 @@ MonoBehaviour:
   m_Rotation:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: -0.014727254, y: 0.18962012, z: 0.002844367, w: 0.98174506}
     speed: 2
     m_Value: {x: -0.014727225, y: 0.18961973, z: 0.0028443611, w: 0.9817431}
@@ -599,6 +632,15 @@ MonoBehaviour:
     m_Target: 1.1782969
     speed: 2
     m_Value: 1.1808536
+=======
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 13.054247
+    speed: 2
+    m_Value: 13.054247
+>>>>>>> Stashed changes
 =======
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
@@ -672,6 +714,9 @@ MonoBehaviour:
     width: 1202
     height: 224
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -691,7 +736,11 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - Assets/RPG Pack/Prefabs
+=======
+    - Assets/Scripts
+>>>>>>> Stashed changes
 =======
     - Assets/Scripts
 >>>>>>> Stashed changes
@@ -705,7 +754,11 @@ MonoBehaviour:
   m_LastFolders:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - Assets/RPG Pack/Prefabs
+=======
+  - Assets/Scripts
+>>>>>>> Stashed changes
 =======
   - Assets/Scripts
 >>>>>>> Stashed changes
@@ -719,6 +772,7 @@ MonoBehaviour:
   m_FolderTreeState:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 02480000
     m_LastClickedID: 18434
@@ -726,11 +780,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     scrollPos: {x: 0, y: 110.49988}
     m_SelectedIDs: f6430000
     m_LastClickedID: 17398
     m_ExpandedIDs: 00000000e4430000e643000000ca9a3b
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
