@@ -2,15 +2,18 @@ Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.30f1 (1fb1bf06830e) revision 2077119'; Using compiler version '192528614'; Build Type 'Release'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'de' Physical Memory: 16192 MB
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'de' Physical Memory: 16192 MB
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'de' Physical Memory: 16192 MB
+=======
 OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'de' Physical Memory: 16169 MB
 >>>>>>> Stashed changes
 =======
@@ -20,6 +23,9 @@ OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'de' Physical Memory: 16169 
 OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'de' Physical Memory: 16169 MB
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -35,6 +41,7 @@ AssetImportWorker0
 -projectPath
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -42,6 +49,9 @@ AssetImportWorker0
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 C:/Users/inaap/Documents/GitHub/BubblyDubbly/Bubble_Trouble_unbelievebubble
@@ -66,7 +76,10 @@ Direct3D:
     Driver:   30.0.101.1122
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -103,6 +116,9 @@ Direct3D:
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -112,6 +128,7 @@ Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBl
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -119,6 +136,9 @@ Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Mo
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
@@ -138,7 +158,10 @@ Domain Reload Profiling:
 		BeginReloadAssembly (110ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -167,6 +190,9 @@ Domain Reload Profiling:
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -177,6 +203,7 @@ Domain Reload Profiling:
 			CreateAndSetChildDomain (1ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -184,6 +211,9 @@ Domain Reload Profiling:
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 		EndReloadAssembly (691ms)
@@ -201,7 +231,10 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (129ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -230,6 +263,9 @@ Domain Reload Profiling:
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -242,6 +278,7 @@ Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -249,6 +286,9 @@ Registering precompiled user dll's ...
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Registered in 0.002554 seconds.
@@ -299,7 +339,10 @@ Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1996.
 Total: 4.773200 ms (FindLiveObjects: 0.235200 ms CreateObjectMapping: 0.130900 ms MarkObjects: 4.306900 ms  DeleteObjects: 0.099000 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -360,6 +403,9 @@ Total: 3.122300 ms (FindLiveObjects: 0.145100 ms CreateObjectMapping: 0.059300 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -379,6 +425,7 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -386,6 +433,9 @@ Received Import Request.
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
   path: Assets/Scripts/SpawnManager.cs
@@ -439,7 +489,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1998.
 Total: 7.228800 ms (FindLiveObjects: 0.598300 ms CreateObjectMapping: 0.197900 ms MarkObjects: 6.359700 ms  DeleteObjects: 0.069300 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -525,6 +578,9 @@ Total: 5.679400 ms (FindLiveObjects: 0.557900 ms CreateObjectMapping: 0.259400 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -543,6 +599,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -550,6 +607,9 @@ AssetImportParameters requested are different than current active one (requested
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Received Import Request.
@@ -629,7 +689,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2008.
 Total: 11.588000 ms (FindLiveObjects: 0.574500 ms CreateObjectMapping: 0.331200 ms MarkObjects: 10.599400 ms  DeleteObjects: 0.078700 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -689,6 +752,9 @@ Total: 4.627600 ms (FindLiveObjects: 0.187700 ms CreateObjectMapping: 0.082200 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -707,6 +773,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -714,6 +781,9 @@ AssetImportParameters requested are different than current active one (requested
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Received Import Request.
@@ -769,7 +839,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2044.
 Total: 6.164100 ms (FindLiveObjects: 0.302000 ms CreateObjectMapping: 0.116300 ms MarkObjects: 5.697500 ms  DeleteObjects: 0.046300 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -829,6 +902,9 @@ Total: 4.571500 ms (FindLiveObjects: 0.225300 ms CreateObjectMapping: 0.076800 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -849,6 +925,7 @@ Received Prepare
 Registering precompiled user dll's ...
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -856,6 +933,9 @@ Registering precompiled user dll's ...
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Registered in 0.003975 seconds.
@@ -903,7 +983,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2046.
 Total: 7.221800 ms (FindLiveObjects: 0.435900 ms CreateObjectMapping: 0.375100 ms MarkObjects: 6.354500 ms  DeleteObjects: 0.053700 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -961,6 +1044,9 @@ Total: 5.597100 ms (FindLiveObjects: 0.206600 ms CreateObjectMapping: 0.094600 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -979,6 +1065,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -986,6 +1073,9 @@ AssetImportParameters requested are different than current active one (requested
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Received Prepare
@@ -1003,7 +1093,10 @@ Domain Reload Profiling:
 		BeginReloadAssembly (268ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1037,6 +1130,9 @@ Domain Reload Profiling:
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1046,6 +1142,7 @@ Domain Reload Profiling:
 			ReleaseScriptingObjects (0ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1053,6 +1150,9 @@ Domain Reload Profiling:
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 			CreateAndSetChildDomain (73ms)
@@ -1073,7 +1173,10 @@ Domain Reload Profiling:
 				AfterProcessingInitializeOnLoad (10ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1105,6 +1208,9 @@ Domain Reload Profiling:
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1114,6 +1220,7 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1121,6 +1228,9 @@ Platform modules already initialized, skipping
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
@@ -1133,7 +1243,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2048.
 Total: 4.535600 ms (FindLiveObjects: 0.219300 ms CreateObjectMapping: 0.096700 ms MarkObjects: 4.188000 ms  DeleteObjects: 0.030100 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1157,6 +1270,9 @@ Total: 5.257300 ms (FindLiveObjects: 0.308800 ms CreateObjectMapping: 0.252300 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1176,6 +1292,7 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1183,6 +1300,9 @@ Received Import Request.
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
   Time since last request: 206.159989 seconds.
@@ -1249,7 +1369,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2051.
 Total: 3.868600 ms (FindLiveObjects: 0.194800 ms CreateObjectMapping: 0.054200 ms MarkObjects: 3.595400 ms  DeleteObjects: 0.022900 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1377,6 +1500,9 @@ Total: 4.293900 ms (FindLiveObjects: 0.265300 ms CreateObjectMapping: 0.107500 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1396,6 +1522,7 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1403,6 +1530,9 @@ Received Import Request.
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
   Time since last request: 82.961405 seconds.
@@ -1469,7 +1599,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2054.
 Total: 6.881500 ms (FindLiveObjects: 0.428300 ms CreateObjectMapping: 0.238000 ms MarkObjects: 6.165800 ms  DeleteObjects: 0.046400 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1527,6 +1660,9 @@ System memory in use after: 76.1 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2053.
 Total: 4.836900 ms (FindLiveObjects: 0.205600 ms CreateObjectMapping: 0.094000 ms MarkObjects: 4.478200 ms  DeleteObjects: 0.057000 ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1546,10 +1682,13 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Time since last request: 108.195279 seconds.
   path: Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
   artifactKey: Guid(11e31a2ebb4e6e246bcf8c0ba034a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   Time since last request: 21.422758 seconds.
@@ -1629,6 +1768,9 @@ Received Import Request.
   path: Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
   artifactKey: Guid(11e31a2ebb4e6e246bcf8c0ba034a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1717,7 +1859,10 @@ Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2057.
 Total: 4.828100 ms (FindLiveObjects: 0.268900 ms CreateObjectMapping: 0.090700 ms MarkObjects: 4.418600 ms  DeleteObjects: 0.047900 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1782,6 +1927,9 @@ Total: 5.257900 ms (FindLiveObjects: 0.349700 ms CreateObjectMapping: 0.218200 m
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1801,6 +1949,7 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1808,6 +1957,9 @@ Received Import Request.
 >>>>>>> Stashed changes
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
   Time since last request: 1000.567082 seconds.
@@ -1834,7 +1986,10 @@ Received Import Request.
 Start importing Assets/RPG Pack/Prefabs/Bottle_Mana.prefab using Guid(2cf6690298568294cb6b655c0a3aeb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2369418ab3b0cc40f1752331c36aadc8') in 0.080661 seconds 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -5006,6 +5161,9 @@ Start importing Assets/Scripts/InGameTextManager.cs using Guid(f6dc5f2eca5f27448
 =======
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
