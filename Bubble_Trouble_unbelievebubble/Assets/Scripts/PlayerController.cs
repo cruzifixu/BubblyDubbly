@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
     private void enableShoot()
     {
         this.canShoot = true;
+        Debug.Log("shooting of " + playerId + " enabled");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -128,16 +129,22 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("health"))
         {
             playerStats.increaseLifes();
+            Debug.Log("health potion");
+            Destroy(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("mana"))
         {
             playerStats.stopDamageForPeriod();
+            Debug.Log("mana potion");
+            Destroy(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("endurance"))
         {
             //this potion is not actually beneficial -> makes you unabe to shoot for a bit
             canShoot = false;
             Invoke("enableShoot", 30);
+            Debug.Log("endurance potion");
+            Destroy(collision.gameObject);
         }
     }
 }

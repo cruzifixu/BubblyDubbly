@@ -42,17 +42,20 @@ public class PlayerStats : MonoBehaviour
     public void increaseLifes()
     {
         this.Lives++;
+        Debug.Log("Life increased");
     }
 
     public void stopDamageForPeriod()
     {
         this.canGetHurt = false;
+        Debug.Log("player stopped taking damage");
         Invoke("setCanGetHurt", 30);
     }
 
     private void setCanGetHurt()
     {
         this.canGetHurt = true;
+        Debug.Log("player started taking damage agein");
     }
 
 
