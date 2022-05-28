@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float gravityModifier = 0.8f;
     public int playerId;
     private PlayerStats playerStats;
+    private bool canShoot = true;
 
     // -- Stats
     private float lives = 3;
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
         { jump(); } // returns clone of original
                     // shoot
-        if (Input.GetAxis("Fire" + playerMoveId) ==1) //triangle
+        if (Input.GetAxis("Fire" + playerMoveId) ==1 && canShoot) //triangle
         { 
             shoot(); 
         } // returns clone of original
@@ -99,6 +100,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log(playerRb.transform.forward);
     }
 
+    private void enableShoot()
+    {
+        this.canShoot = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // if player is on Ground again
@@ -106,6 +112,7 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
         }
+        //if collided with bubble
         if(collision.gameObject.CompareTag("0") || collision.gameObject.CompareTag("1") || collision.gameObject.CompareTag("2"))
         {
             if(collision.gameObject.tag != this.playerId.ToString())
@@ -116,6 +123,21 @@ public class PlayerController : MonoBehaviour
                 //Destroy(collision.gameObject);
             }
 
+        }
+        //if collided with potion of various types
+        if(collision.gameObject.CompareTag("health"))
+        {
+            playerStats.increaseLifes();
+        }
+        if(collision.gameObject.CompareTag("mana"))
+        {
+            playerStats.stopDamageForPeriod();
+        }
+        if(collision.gameObject.CompareTag("endurance"))
+        {
+            //this potion is not actually beneficial -> makes you unabe to shoot for a bit
+            canShoot = false;
+            Invoke("enableShoot", 30);
         }
     }
 }

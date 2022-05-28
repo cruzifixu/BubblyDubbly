@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     private float Lives = 3;
     private float PlayerHit = 0;
     private float gotHit = 0;
+    private bool canGetHurt = true;
 
     // Bounds
     private float bound = 30f;
@@ -37,6 +38,24 @@ public class PlayerStats : MonoBehaviour
 
     public void reduceLives()
     { --this.Lives; }
+
+    public void increaseLifes()
+    {
+        this.Lives++;
+    }
+
+    public void stopDamageForPeriod()
+    {
+        this.canGetHurt = false;
+        Invoke("setCanGetHurt", 30);
+    }
+
+    private void setCanGetHurt()
+    {
+        this.canGetHurt = true;
+    }
+
+
 
     public void reduceLivePercentage(string playerId, string hurtPlayerId)
     {
