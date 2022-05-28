@@ -79,9 +79,7 @@ public class PlayerController : MonoBehaviour
             jump();
             /*playerAnim.SetTrigger("JumpStart");
             playerAnim.SetTrigger("JumpUp");
-            playerAnim.SetTrigger("JumpUpAttack");
             playerAnim.SetTrigger("JumpAir");
-            playerAnim.SetTrigger("JumpAirAttack");
             playerAnim.SetTrigger("JumpEnd");*/
         } // returns clone of original
                     // shoot
