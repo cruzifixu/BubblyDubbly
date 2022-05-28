@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     // -- Player
     private Rigidbody playerRb;
+    private Animator playerAnim;
     private bool isOnGround = true;
     private float gravityModifier = 0.8f;
     public int playerId;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerStats = GetComponent<PlayerStats>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -73,7 +75,15 @@ public class PlayerController : MonoBehaviour
 
         // jump
         if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
-        { jump(); } // returns clone of original
+        { 
+            jump();
+            /*playerAnim.SetTrigger("JumpStart");
+            playerAnim.SetTrigger("JumpUp");
+            playerAnim.SetTrigger("JumpUpAttack");
+            playerAnim.SetTrigger("JumpAir");
+            playerAnim.SetTrigger("JumpAirAttack");
+            playerAnim.SetTrigger("JumpEnd");*/
+        } // returns clone of original
                     // shoot
         if (Input.GetAxis("Fire" + playerMoveId) ==1 && canShoot) //triangle
         { 
