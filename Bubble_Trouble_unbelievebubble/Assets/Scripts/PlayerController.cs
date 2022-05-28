@@ -94,7 +94,9 @@ public class PlayerController : MonoBehaviour
         GameObject Bubble = Instantiate(projectilePrefab, transform.position + offset, projectilePrefab.transform.rotation);
         Bubble.gameObject.tag = playerId.ToString();
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
-        BubbleRb.AddForce(transform.right * BubbleSpeed);
+        //BubbleRb.AddForce(transform.right * BubbleSpeed);
+        BubbleRb.AddForce(playerRb.transform.forward * BubbleSpeed);
+        Debug.Log(playerRb.transform.forward);
     }
 
     private void OnCollisionEnter(Collision collision)

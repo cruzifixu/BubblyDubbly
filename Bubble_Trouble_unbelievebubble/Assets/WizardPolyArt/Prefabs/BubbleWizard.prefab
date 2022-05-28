@@ -76,8 +76,8 @@ GameObject:
   - component: {fileID: 4538142575934858494}
   - component: {fileID: 4488611326315636384}
   - component: {fileID: 1558404997}
-  - component: {fileID: 3867073028710537028}
   - component: {fileID: 6283475012412365849}
+  - component: {fileID: -6661539117196656937}
   m_Layer: 0
   m_Name: BubbleWizard
   m_TagString: Player
@@ -148,7 +148,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 2
   projectilePrefab: {fileID: 1965313692455383834, guid: 8badac5974d010b418b29bab3fe68ee1, type: 3}
---- !u!54 &3867073028710537028
+--- !u!114 &6283475012412365849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4586940847721936624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4741a31f7b86d41aeac30a1c9582f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerStatsScreen: {fileID: 0}
+--- !u!54 &-6661539117196656937
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,6 +177,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
 --- !u!114 &6283475012412365849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerStatsScreen: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &4586948090591368696
 GameObject:
   m_ObjectHideFlags: 0
