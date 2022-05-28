@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 10.0f;
     private float BubbleSpeed = 10.0f;
     private float turnSpeed = 300.0f;
-    private float jumpForce = 350;
+    private float jumpForce = 400;
 
     // --- Range
     private float PlusZRange = -3.4f;
