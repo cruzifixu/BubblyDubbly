@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> potions;
     private float spawnRate = 1.0f;
     public bool isGameActive;
-    private float playerCount;
+    private int playerCount = -1;
 
     private List<PlayerStats> PlayerStatsList;
     private List<int> PlayerList;
@@ -24,13 +24,14 @@ public class GameManager : MonoBehaviour
 
     // CHOICE
     public GameObject PlayerChoiceScreen;
+    public GameObject PlayerCountScreen;
     public List<GameObject> Choices;
 
     // IN GAME TEXT
     public TextMeshProUGUI BubbleStats;
     public TextMeshProUGUI IvyStats;
     public TextMeshProUGUI StormStats;
-    //public TextMeshProUGUI BubbleStats;
+    public TextMeshProUGUI RoseStats;
 
     //public TextMeshProUGUI livesText;
     private int score;
@@ -46,6 +47,12 @@ public class GameManager : MonoBehaviour
     private Button IvyButton;
     private Button BubbleButton;
     private Button StormButton;
+    private Button RoseButton;
+
+    // Player Counter
+    private Button Two;
+    private Button Three;
+    private Button Four;
 
     private int disabled=0;
 
@@ -53,7 +60,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         PlayerStatsList = new List<PlayerStats>();
-        PlayerList = new List<int>();
         StartGame();
     }
 
@@ -66,51 +72,51 @@ public class GameManager : MonoBehaviour
             Pause();
         }
 
-        if(disabled > 1) disableStartscreen();
+        if(disabled == playerCount) disableStartscreen();
     }
 
     public void StartGame()
     {
         isGameActive = true;
-        //StartCoroutine(SpawnTarget());
-        spawnRate /= playerCount;
+        titleScreen.SetActive(true);
+        PlayerCounting();
+    }
 
+    private void SetPlayers(Button button)
+    {
+        playerCount = int.Parse(button.GetComponentInChildren<TextMeshProUGUI>().text);
+        PlayerList = new List<int>(playerCount);
+        PlayerCountScreen.SetActive(false);
         ChoosePlayer();
+    }
+
+    public void PlayerCounting()
+    {
+        PlayerCountScreen.gameObject.SetActive(true);
+
+        Two = GameObject.Find("2").GetComponent<Button>();
+        Three = GameObject.Find("3").GetComponent<Button>();
+        Four = GameObject.Find("4").GetComponent<Button>();
+
+        Two.onClick.AddListener(delegate { SetPlayers(Two); });
+        Three.onClick.AddListener(delegate { SetPlayers(Three); });
+        Four.onClick.AddListener(delegate { SetPlayers(Four); });
     }
 
     public void ChoosePlayer()
     {
         PlayerChoiceScreen.gameObject.SetActive(true);
 
-        int disabled = 0;
-
         // -- Get Components
         IvyButton = GameObject.Find("Ivy").GetComponent<Button>();
-        BubbleButton = GameObject.Find("Bubble").GetComponent<Button>();
         StormButton = GameObject.Find("Storm").GetComponent<Button>();
+        BubbleButton = GameObject.Find("Bubble").GetComponent<Button>();
+        RoseButton = GameObject.Find("Rose").GetComponent<Button>();
 
-        IvyButton.onClick.AddListener(SetIvy);
-        BubbleButton.onClick.AddListener(SetBubble);
-        StormButton.onClick.AddListener(SetStorm);
-
-        /*
-        if (!IvyButton.enabled) disabled += 1;
-        if (!BubbleButton.enabled) disabled += 1;
-        if (!StormButton.enabled) disabled += 1;
-
-        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
-        */
-    }
-
-    public void UpdateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        if (score < 0)
-        {
-            score = 0;
-            GameOver();
-        }
-        //scoreText.text = "Score: " + score;
+        IvyButton.onClick.AddListener(delegate { SetWizard(IvyButton, 0); });
+        StormButton.onClick.AddListener(delegate { SetWizard(StormButton, 1); });
+        BubbleButton.onClick.AddListener(delegate { SetWizard(BubbleButton, 2); });
+        RoseButton.onClick.AddListener(delegate { SetWizard(RoseButton, 3); });
     }
 
     void Pause()
@@ -157,6 +163,10 @@ public class GameManager : MonoBehaviour
                 BubbleStats.text = Stats;
                 BubbleStats.gameObject.SetActive(true);
                 break;
+            case 3:
+                RoseStats.text = Stats;
+                RoseStats.gameObject.SetActive(true);
+                break;
         }
     }
 
@@ -165,49 +175,33 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    IEnumerator SpawnTarget()
-    {
-        while (isGameActive)
-        {
-            yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, potions.Count);
-            Instantiate(potions[index]);
-        }
-
-    }
-
     public void addToPlayerList(PlayerStats Stats)
     { this.PlayerStatsList.Add(Stats); }
 
     public List<PlayerStats> getPlayerStatsList()
     { return PlayerStatsList; }
 
-    private void SetIvy()
-    {
-        IvyButton.interactable = false; // disable Button
-        Instantiate(players[0], new Vector3(1, 1, 0), players[0].transform.rotation);
-        disabled++;
-        PlayerList.Add(0);
-    }
-    private void SetBubble()
-    {
-        BubbleButton.interactable = false; // disable Button
-        Instantiate(players[1], new Vector3(2, 1, 0), players[1].transform.rotation);
-        disabled++;
-        PlayerList.Add(2);
+    public int getPlayerCount()
+    { return playerCount;  }
+
+    public void reducePlayerCount(string playerId)
+    { 
+        playerCount--; 
+        GameObject playerToDie = GameObject.Find(playerId);
+        Destroy(playerToDie);
     }
 
-    private void SetStorm()
+    private void SetWizard(Button button, int wizard)
     {
-        StormButton.interactable = false; // disable Button
-        Instantiate(players[2], new Vector3(3, 1, 0), players[2].transform.rotation);
+        button.interactable = false; // disable button
+        Instantiate(players[wizard], new Vector3(wizard, 1, 0), players[wizard].transform.rotation);
         disabled++;
-        PlayerList.Add(1);
+        PlayerList.Add(wizard);
     }
 
     private void disableStartscreen()
     {
-        if (disabled > 1) PlayerChoiceScreen.gameObject.SetActive(false);
+        if (disabled == playerCount) PlayerChoiceScreen.gameObject.SetActive(false);
         titleScreen.gameObject.SetActive(false);
     }
 }

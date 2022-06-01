@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // -- Player
+<<<<<<< Updated upstream
     private Rigidbody playerRb;
+=======
+    private Rigidbody playerRb; 
+>>>>>>> Stashed changes
     private Animator playerAnim;
     private bool isOnGround = true;
-    private float gravityModifier = 0.8f;
+    private float gravityModifier = 1.2f;
     public int playerId;
     private PlayerStats playerStats;
     private bool canShoot = true;
@@ -21,9 +25,13 @@ public class PlayerController : MonoBehaviour
 
     // --- Skills
     private float speed = 10.0f;
-    private float BubbleSpeed = 10.0f;
+    private float BubbleSpeed = 30.0f;
     private float turnSpeed = 300.0f;
+<<<<<<< Updated upstream
     private float jumpForce = 400;
+=======
+    private float jumpForce = 450;
+>>>>>>> Stashed changes
 
     // --- Range
     private float PlusZRange = -3.4f;
@@ -31,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
     // --- bubbles
     public GameObject projectilePrefab;
+
 
     //private UpdatePlayerStats Stats;
 
@@ -49,9 +58,6 @@ public class PlayerController : MonoBehaviour
     {
         int playerMoveId = playerId + 1;
         horizontalInput = Input.GetAxis("Horizontal" + playerMoveId);
-        //verticalInput = Input.GetAxis("Vertical" + playerMoveId);
-
-        //horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
         movementDirection.Normalize();
@@ -75,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
         // jump
         if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
+<<<<<<< Updated upstream
         { 
             jump();
             /*playerAnim.SetTrigger("JumpStart");
@@ -86,6 +93,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Fire" + playerMoveId) ==1 && canShoot) //triangle
         { 
             shoot(); 
+=======
+        {  jump(); } // returns clone of original
+                     // shoot
+        if (Input.GetAxis("Fire" + playerMoveId) == 1 && canShoot) //triangle
+        {
+            StartCoroutine(shootCou());
+>>>>>>> Stashed changes
         } // returns clone of original
         //}
 
@@ -95,14 +109,30 @@ public class PlayerController : MonoBehaviour
     {
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isOnGround = false; // prevent double jump
+        playerAnim.SetTrigger("Jump_trig");
+        //playerAnim.SetTrigger("JumpUp");
+        //playerAnim.SetTrigger("JumpAir");
+        //playerAnim.SetTrigger("JumpEnd");
+    }
+
+    public IEnumerator shootCou()
+    {
+        shoot();
+        canShoot = false;
+        yield return new WaitForSeconds(1);
+        canShoot = true;
     }
 
     private void shoot()
     {
         Vector3 offset = new Vector3(0.5f, 1, 0);
+        Vector3 left = new Vector3(-1, 0, 0);
+        if (playerRb.transform.forward == left)
+        { offset = new Vector3(-0.5f, 1, 0); }
         GameObject Bubble = Instantiate(projectilePrefab, transform.position + offset, projectilePrefab.transform.rotation);
         Bubble.gameObject.tag = playerId.ToString();
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
+<<<<<<< Updated upstream
         //BubbleRb.AddForce(transform.right * BubbleSpeed);
         BubbleRb.AddForce(playerRb.transform.forward * BubbleSpeed);
         Debug.Log(playerRb.transform.forward);
@@ -112,6 +142,9 @@ public class PlayerController : MonoBehaviour
     {
         this.canShoot = true;
         Debug.Log("shooting of " + playerId + " enabled");
+=======
+        BubbleRb.AddForce(playerRb.transform.forward * BubbleSpeed, ForceMode.Impulse);
+>>>>>>> Stashed changes
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -129,24 +162,36 @@ public class PlayerController : MonoBehaviour
                 Debug.Log(collision.gameObject.name +" hit " + this.name);
                 playerStats.reduceLivePercentage(collision.gameObject.tag, this.name);
                 playerStats.playerHitOther();
-                //Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
 
         }
         //if collided with potion of various types
+<<<<<<< Updated upstream
         if(collision.gameObject.CompareTag("health"))
+=======
+        if (collision.gameObject.CompareTag("health"))
+>>>>>>> Stashed changes
         {
             playerStats.increaseLifes();
             Debug.Log("health potion");
             Destroy(collision.gameObject);
         }
+<<<<<<< Updated upstream
         if(collision.gameObject.CompareTag("mana"))
+=======
+        if (collision.gameObject.CompareTag("mana"))
+>>>>>>> Stashed changes
         {
             playerStats.stopDamageForPeriod();
             Debug.Log("mana potion");
             Destroy(collision.gameObject);
         }
+<<<<<<< Updated upstream
         if(collision.gameObject.CompareTag("endurance"))
+=======
+        if (collision.gameObject.CompareTag("endurance"))
+>>>>>>> Stashed changes
         {
             //this potion is not actually beneficial -> makes you unabe to shoot for a bit
             canShoot = false;

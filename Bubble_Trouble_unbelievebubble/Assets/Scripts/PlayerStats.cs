@@ -59,7 +59,10 @@ public class PlayerStats : MonoBehaviour
     }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public void reduceLivePercentage(string playerId, string hurtPlayerId)
     {
         if (this.LivePercentage > 0)
@@ -72,8 +75,8 @@ public class PlayerStats : MonoBehaviour
         {
             if(Lives < 1)
             {
-                GameManagerScript.GameOver();
-                Debug.Log("player " + playerId + " won");
+                GameManagerScript.reducePlayerCount(hurtPlayerId);
+                if(GameManagerScript.getPlayerCount() < 2) GameManagerScript.GameOver();
                 return;
             }
             reduceLives();
@@ -95,6 +98,9 @@ public class PlayerStats : MonoBehaviour
                 break;
             case 2:
                 player = "Bubble";
+                break;
+            case 3:
+                player = "Rose";
                 break;
         }
         string StatsText = player + "\nLives left: " + (3 - Lives) + "\nTook damage: " + gotHit + "\nDamage made: " + PlayerHit;
