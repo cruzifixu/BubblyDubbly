@@ -12,6 +12,11 @@ TagManager:
   - endurance
   - health
   - mana
+  - IvyWizard
+  - StormWizard
+  - BubbleWizard
+  - RoseWizard
+  - 3
   layers:
   - Default
   - TransparentFX

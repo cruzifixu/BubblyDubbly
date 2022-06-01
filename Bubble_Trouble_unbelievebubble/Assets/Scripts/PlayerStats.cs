@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     private float Lives = 3;
     private float PlayerHit = 0;
     private float gotHit = 0;
+     private bool canGetHurt = true;
 
     // Bounds
     private float bound = 30f;
@@ -38,24 +39,45 @@ public class PlayerStats : MonoBehaviour
     public void reduceLives()
     { --this.Lives; }
 
+    public void increaseLifes()
+    {
+        this.Lives++;
+        Debug.Log("Life increased");
+    }
+
+    public void stopDamageForPeriod()
+    {
+        this.canGetHurt = false;
+        Debug.Log("player stopped taking damage");
+        Invoke("setCanGetHurt", 30);
+    }
+
+    private void setCanGetHurt()
+    {
+        this.canGetHurt = true;
+        Debug.Log("player started taking damage agein");
+    }
+
     public void reduceLivePercentage(string playerId, string hurtPlayerId)
     {
+        playerId = playerId.Replace("_bubble", "");
+        string newhurtPlayerId = hurtPlayerId.Replace("(Clone)", "");
         if (this.LivePercentage > 0)
         {
             this.LivePercentage--;
             gotHit++; // player got hit
-            Debug.Log(playerId + " hit " + hurtPlayerId);
+            Debug.Log(playerId + " hit " + newhurtPlayerId);
         }
         else
         {
-            if(Lives < 1)
+            if (Lives < 1)
             {
-                GameManagerScript.GameOver();
-                Debug.Log("player " + playerId + " won");
+                GameManagerScript.reducePlayerCount(hurtPlayerId);
+                if (GameManagerScript.getPlayerCount() < 2) GameManagerScript.GameOver(playerId);
                 return;
             }
             reduceLives();
-            Debug.Log(playerId + " only has " + Lives + "left.");
+            Debug.Log(newhurtPlayerId + " only has " + Lives + "left.");
         }
     }
 
@@ -73,6 +95,9 @@ public class PlayerStats : MonoBehaviour
                 break;
             case 2:
                 player = "Bubble";
+                break;
+            case 3:
+                player = "Rose";
                 break;
         }
         string StatsText = player + "\nLives left: " + (3 - Lives) + "\nTook damage: " + gotHit + "\nDamage made: " + PlayerHit;

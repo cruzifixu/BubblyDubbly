@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     // -- Player
     private Rigidbody playerRb;
+    private Animator playerAnim;
     private bool isOnGround = true;
-    private float gravityModifier = 0.8f;
+    private float gravityModifier = 1.2f;
     public int playerId;
     private PlayerStats playerStats;
+    private bool canShoot = true;
 
     // -- Stats
     private float lives = 3;
@@ -19,9 +21,8 @@ public class PlayerController : MonoBehaviour
 
     // --- Skills
     private float speed = 10.0f;
-    private float BubbleSpeed = 10.0f;
-    private float turnSpeed = 300.0f;
-    private float jumpForce = 350;
+    private float BubbleSpeed = 30.0f;
+    private float jumpForce = 450;
 
     // --- Range
     private float PlusZRange = -3.4f;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerStats = GetComponent<PlayerStats>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -72,15 +74,16 @@ public class PlayerController : MonoBehaviour
 
         // jump
         if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
-        { jump(); } // returns clone of original
-                    // shoot
-        if (Input.GetAxis("Fire" + playerMoveId) ==1) //triangle
         { 
-            shoot(); 
+            jump();
+            playerAnim.SetTrigger("Jump_trig");
         } // returns clone of original
-        //}
+                    // shoot
+        if (Input.GetAxis("Fire" + playerMoveId) ==1 && canShoot) //triangle
+        { StartCoroutine(shootCou()); } // returns clone of original
+            //}
 
-    }
+        }
 
     private void jump()
     {
@@ -88,13 +91,26 @@ public class PlayerController : MonoBehaviour
         isOnGround = false; // prevent double jump
     }
 
+    public IEnumerator shootCou()
+    {
+        shoot();
+        canShoot = false;
+        yield return new WaitForSeconds(1);
+        canShoot = true;
+    }
+
     private void shoot()
     {
+        string newTag = this.gameObject.name.Replace("(Clone)", "");
         Vector3 offset = new Vector3(0.5f, 1, 0);
+        Vector3 left = new Vector3(-1, 0, 0);
+        if (playerRb.transform.forward == left)
+        { offset = new Vector3(-0.5f, 1, 0); }
         GameObject Bubble = Instantiate(projectilePrefab, transform.position + offset, projectilePrefab.transform.rotation);
-        Bubble.gameObject.tag = playerId.ToString();
+        Bubble.gameObject.tag = this.playerId.ToString();
+        Bubble.gameObject.name = newTag + "_bubble";
         Rigidbody BubbleRb = Bubble.GetComponent<Rigidbody>();
-        BubbleRb.AddForce(transform.right * BubbleSpeed);
+        BubbleRb.AddForce(playerRb.transform.forward * BubbleSpeed, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -104,16 +120,36 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
         }
-        if(collision.gameObject.CompareTag("0") || collision.gameObject.CompareTag("1") || collision.gameObject.CompareTag("2"))
+        if(collision.gameObject.CompareTag("0") || collision.gameObject.CompareTag("1") || collision.gameObject.CompareTag("2") || collision.gameObject.CompareTag("3"))
         {
             if(collision.gameObject.tag != this.playerId.ToString())
             {
-                Debug.Log(collision.gameObject.name +" hit " + this.name);
-                playerStats.reduceLivePercentage(collision.gameObject.tag, this.name);
+                playerStats.reduceLivePercentage(collision.gameObject.name, this.name);
                 playerStats.playerHitOther();
-                //Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
 
+        }
+        //if collided with potion of various types
+        if (collision.gameObject.CompareTag("health"))
+        {
+            playerStats.increaseLifes();
+            Debug.Log("health potion");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("mana"))
+        {
+            playerStats.stopDamageForPeriod();
+            Debug.Log("mana potion");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("endurance"))
+        {
+            //this potion is not actually beneficial -> makes you unabe to shoot for a bit
+            canShoot = false;
+            Invoke("enableShoot", 30);
+            Debug.Log("endurance potion");
+            Destroy(collision.gameObject);
         }
     }
 }
