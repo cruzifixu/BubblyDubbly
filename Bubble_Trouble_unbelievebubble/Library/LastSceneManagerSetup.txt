@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Flat Textures Pack/Demo/Demo.unity
+- path: Assets/Turntable_platforms/scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

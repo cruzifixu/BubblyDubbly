@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
     {
         playerCount--;
         GameObject playerToDie = GameObject.Find(playerId);
-        Destroy(playerToDie);
     }
 
 

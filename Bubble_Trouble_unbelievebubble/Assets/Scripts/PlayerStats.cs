@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
 
     // Scripts
     private GameManager GameManagerScript;
+    PlayerController playerControllerScript;
 
     // TEXTS
     public GameObject PlayerStatsScreen;
@@ -23,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerControllerScript = GetComponent<PlayerController>();
         GameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
         GameManagerScript.addToPlayerList(this);
     }
@@ -72,6 +74,7 @@ public class PlayerStats : MonoBehaviour
         {
             if (Lives < 1)
             {
+                StartCoroutine(playerControllerScript.PlayerDeath(hurtPlayerId));
                 GameManagerScript.reducePlayerCount(hurtPlayerId);
                 if (GameManagerScript.getPlayerCount() < 2) GameManagerScript.GameOver(playerId);
                 return;

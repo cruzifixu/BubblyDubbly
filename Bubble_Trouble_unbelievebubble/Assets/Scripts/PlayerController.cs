@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 10.0f;
     private float BubbleSpeed = 30.0f;
     private float KnockBack = 850f;
-    private float jumpForce = 450;
+    private float jumpForce = 550;
 
     // --- Range
     private float PlusZRange = -3.4f;
@@ -100,7 +100,8 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator shootCou()
     {
-        for(int x = 0; x < 10; x++) shoot();
+        playerAnim.SetTrigger("Attack_trig");
+        for (int x = 0; x < 10; x++) shoot();
         canShoot = false;
         yield return new WaitForSeconds(1);
         canShoot = true;
@@ -163,5 +164,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("endurance potion");
             Destroy(collision.gameObject);
         }
+    }
+
+    public IEnumerator PlayerDeath(string playerId)
+    {
+        playerAnim.SetTrigger("Die");
+        yield return new WaitForSeconds(1);
+        GameObject playerToDie = GameObject.Find(playerId);
+        Destroy(playerToDie);
     }
 }
