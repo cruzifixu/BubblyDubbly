@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
     public void GameOver(string playerId)
     {
         gameOverText.gameObject.SetActive(true);
+        playerId = playerId.Replace("Wizard", "");
         WinnerText.text = "Winner is " + playerId;
         WinnerText.gameObject.SetActive(true);
         isGameActive = false;

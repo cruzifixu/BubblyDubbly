@@ -77,7 +77,8 @@ public class PlayerStats : MonoBehaviour
                 return;
             }
             reduceLives();
-            Debug.Log(newhurtPlayerId + " only has " + Lives + "left.");
+            LivePercentage = 20f;
+            Debug.Log(newhurtPlayerId + " only has " + Lives + " lives left.");
         }
     }
 

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // --- Skills
     private float speed = 10.0f;
     private float BubbleSpeed = 30.0f;
+    private float KnockBack = 850f;
     private float jumpForce = 450;
 
     // --- Range
@@ -71,6 +72,12 @@ public class PlayerController : MonoBehaviour
         { transform.position = new Vector3(transform.position.x, transform.position.y, MinusZRange); }
         if (transform.position.z > PlusZRange)
         { transform.position = new Vector3(transform.position.x, transform.position.y, PlusZRange); }
+        if(transform.position.y < -20)
+        {
+            this.playerRb.velocity = new Vector3(0, 0, 0);
+            transform.position = new Vector3(-1.5f, 1, transform.position.z);
+            playerStats.reduceLives();
+        }
 
         // jump
         if (Input.GetAxis("Jump" + playerMoveId) ==1 && isOnGround)
@@ -93,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator shootCou()
     {
-        shoot();
+        for(int x = 0; x < 10; x++) shoot();
         canShoot = false;
         yield return new WaitForSeconds(1);
         canShoot = true;
@@ -125,6 +132,11 @@ public class PlayerController : MonoBehaviour
             if(collision.gameObject.tag != this.playerId.ToString())
             {
                 playerStats.reduceLivePercentage(collision.gameObject.name, this.name);
+                Vector3 left = new Vector3(-1, 0, 0);
+                if (collision.rigidbody.transform.forward == left)
+                    this.playerRb.AddForce(-collision.transform.forward * KnockBack, ForceMode.Impulse);
+                else
+                    this.playerRb.AddForce(collision.transform.forward * KnockBack, ForceMode.Impulse);
                 playerStats.playerHitOther();
                 Destroy(collision.gameObject);
             }

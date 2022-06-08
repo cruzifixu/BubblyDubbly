@@ -1,0 +1,2 @@
+C:\Users\Franz\OneDrive\Dokumente\GitHub\BubblyDubbly\Bubble_Trouble_unbelievebubble\obj\Debug\Unity.Rider.Editor.csproj.AssemblyReference.cache
+C:\Users\Franz\OneDrive\Dokumente\GitHub\BubblyDubbly\Bubble_Trouble_unbelievebubble\obj\Debug\Unity.Rider.Editor.csproj.CoreCompileInputs.cache
