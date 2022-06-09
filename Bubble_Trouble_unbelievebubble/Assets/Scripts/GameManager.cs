@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     // TITLE
     public GameObject titleScreen;
+    public Image Bg;
 
     // CHOICE
     public GameObject PlayerChoiceScreen;
@@ -37,7 +38,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI pausedText;
 
     // GAME OVER TEXT
-    public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI WinnerText;
     public Button restartButton;
 
@@ -53,6 +53,14 @@ public class GameManager : MonoBehaviour
     private Button RoseButton;
 
     private int disabled=0;
+
+    // -- WINNER
+    public RawImage WinnerPic;
+    public GameObject WinnerPicOBj;
+    public RawImage WinnerIvy;
+    public RawImage WinnerBubble;
+    public RawImage WInnerRose;
+    public RawImage WinnerStorm;
 
     // Start is called before the first frame update
     void Start()
@@ -108,10 +116,9 @@ public class GameManager : MonoBehaviour
     { return playerCount; }
 
 
-    public void reducePlayerCount(string playerId)
+    public void reducePlayerCount()
     {
         playerCount--;
-        GameObject playerToDie = GameObject.Find(playerId);
     }
 
 
@@ -171,9 +178,25 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(string playerId)
     {
-        gameOverText.gameObject.SetActive(true);
         playerId = playerId.Replace("Wizard", "");
         WinnerText.text = "Winner is " + playerId;
+        WinnerPicOBj.gameObject.SetActive(true);
+        switch(playerId)
+        {
+            case "Ivy":
+                WinnerPic.texture = WinnerIvy.texture;
+                break;
+            case "Bubble":
+                WinnerPic.texture = WinnerBubble.texture;
+                break;
+            case "Rose":
+                WinnerPic.texture = WInnerRose.texture;
+                break;
+            case "Storm":
+                WinnerPic.texture = WinnerStorm.texture;
+                break;
+
+        }
         WinnerText.gameObject.SetActive(true);
         isGameActive = false;
         restartButton.gameObject.SetActive(true);
@@ -216,6 +239,7 @@ public class GameManager : MonoBehaviour
     {
         if (disabled == playerCount) PlayerChoiceScreen.gameObject.SetActive(false);
         titleScreen.gameObject.SetActive(false);
+        Bg.gameObject.SetActive(false);
     }
 }
 

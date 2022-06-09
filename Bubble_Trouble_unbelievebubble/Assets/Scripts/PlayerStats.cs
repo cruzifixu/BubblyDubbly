@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     private float Lives = 3;
     private float PlayerHit = 0;
     private float gotHit = 0;
-     private bool canGetHurt = true;
+    private bool canGetHurt = true;
 
     // Bounds
     private float bound = 30f;
@@ -72,10 +72,11 @@ public class PlayerStats : MonoBehaviour
         }
         else
         {
-            if (Lives < 1)
+            if (this.Lives < 1 && canGetHurt == true)
             {
+                canGetHurt = false;
+                GameManagerScript.reducePlayerCount();
                 StartCoroutine(playerControllerScript.PlayerDeath(hurtPlayerId));
-                GameManagerScript.reducePlayerCount(hurtPlayerId);
                 if (GameManagerScript.getPlayerCount() < 2) GameManagerScript.GameOver(playerId);
                 return;
             }
@@ -104,8 +105,17 @@ public class PlayerStats : MonoBehaviour
                 player = "Rose";
                 break;
         }
-        string StatsText = player + "\nLives left: " + (3 - Lives) + "\nTook damage: " + gotHit + "\nDamage made: " + PlayerHit;
+        string StatsText = player + "\nLives left: " + (3 - Lives) + "\nDamage taken: " + gotHit + "\nDamage made: " + PlayerHit;
 
         return StatsText;
     }
+
+    public float getPlayerLives()
+    { return Lives;  }
+    
+    public void getHurtChange(bool change)
+    { this.canGetHurt = change; }
+
+    public bool getHurt()
+    { return canGetHurt; }
 }

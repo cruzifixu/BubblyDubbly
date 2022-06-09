@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("instanticatePotion", startDelay, Random.Range(10.0f, 20.0f));
+        InvokeRepeating("instanticatePotion", startDelay, Random.Range(20.0f, 30.0f));
     }
 
     // Update is called once per frame

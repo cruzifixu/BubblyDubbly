@@ -49,18 +49,14 @@ public class PlayerController : MonoBehaviour
     {
         int playerMoveId = playerId + 1;
         horizontalInput = Input.GetAxis("Horizontal" + playerMoveId);
-        //verticalInput = Input.GetAxis("Vertical" + playerMoveId);
-
-        //horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
         movementDirection.Normalize();
 
-        //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         transform.Translate(movementDirection * Time.deltaTime * speed, Space.World);
-        //transform.Rotate(Vector3.forward, Time.deltaTime * turnSpeed * -horizontalInput);
+        if (horizontalInput != 0) playerAnim.SetTrigger("run_trig");
+        else playerAnim.SetTrigger("stop_trig");
 
-        //TODO: MAKE MOVEMENT BETTER (https://www.youtube.com/watch?v=BJzYGsMcy8Q&ab_channel=KetraGames)
         if (movementDirection != Vector3.zero)
         {
             transform.forward = movementDirection;
@@ -88,9 +84,7 @@ public class PlayerController : MonoBehaviour
                     // shoot
         if (Input.GetAxis("Fire" + playerMoveId) ==1 && canShoot) //triangle
         { StartCoroutine(shootCou()); } // returns clone of original
-            //}
-
-        }
+    }
 
     private void jump()
     {
@@ -160,7 +154,7 @@ public class PlayerController : MonoBehaviour
         {
             //this potion is not actually beneficial -> makes you unabe to shoot for a bit
             canShoot = false;
-            Invoke("enableShoot", 30);
+            Invoke("enableShoot", 10);
             Debug.Log("endurance potion");
             Destroy(collision.gameObject);
         }
